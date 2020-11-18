@@ -1,0 +1,11 @@
+Read me file:
+-------------------------------------------------------
+Syslog server has been setup:
+1 Client Pc has been created and logs are successfully being sent to the server
+
+Needs:
+-------------------------------------------------------
+Need 4 more clients that communicate with the server. 
+Need to make a admin page that displays all log files 
+  - Would like for the page to sort by client pc
+Need to make an admin log in - so only admin can view the log files. 
