@@ -59,6 +59,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fafafa;
+  /*#fafafa*/
 }
 
 [tabindex="-1"]:focus {
@@ -480,6 +481,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fafafa;
+  /*#fafafa*/
 }
 
 [tabindex="-1"]:focus {
