@@ -223,8 +223,8 @@
                   <div class="tab-content">
                     <div class="tab-pane active" id="profile">
                     <?php
-	                    echo "Here are our infected Users<br><br>";
-	                    $path = "/usr/share/fileupload/home/";
+	                    echo "Here is a list of all our client devices<br><br>";
+	                    $path = "/var/log/";
 	                    $dh = opendir($path);
 	                    $i=1;
 	                    while (($filename = readdir($dh)) !== false) {
