@@ -9,6 +9,15 @@ Coded by Creative Tim
 
 =========================================================
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<?php
+   session_start();
+   if($_SESSION['login_user']){
+      echo "Welcome user " . $_SESSION["login_user"];
+   }else{
+      header("location:login_page.html");
+   }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +40,7 @@ The above copyright notice and this permission notice shall be included in all c
 </head>
 
 <body class="">
+<h2><a href = "logout.php">Sign Out</a></h2>
   <div class="wrapper ">
     <div class="sidebar" data-color="azure" data-background-color="black" data-image="../documentation/img/sidebar-1.jpg">
       <!--
