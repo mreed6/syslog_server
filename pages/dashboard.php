@@ -224,8 +224,9 @@
                     <div class="tab-pane active" id="profile">
                     <?php
 	                    echo "Here is a list of all our client devices<br><br>";
-	                    $path = "/var/log/";
+	                    $path = "/var/log/client_devices/";
 	                    $dh = opendir($path);
+	                    $dspecfic =
 	                    $i=1;
 	                    while (($filename = readdir($dh)) !== false) {
                         	if($filename != "." && $filename != ".." && $filename != "sample.php" && $filename != ".htaccess" && $filename != "error_log" && $filename != "cgi-bin") {
