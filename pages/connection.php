@@ -1,7 +1,7 @@
 <?php
 $serverName = "localhost";
-$userName = "root";
-$password = "csi3660Project";
+$userName = "reed3";
+$password = "Password";
 $dbName = "LoginPage";
 
 // Create connection
