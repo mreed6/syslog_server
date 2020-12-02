@@ -25,9 +25,7 @@
   <link href="../documentation/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../documentation/demo/demo.css" rel="stylesheet" />
-  <?php
-        $total_items  = count(glob("test/*", GLOB_ONLYDIR)
-    ?>
+
 </head>
 
 <body class="">
@@ -121,7 +119,7 @@
                     <i class="material-icons">computer</i>
                   </div>
                   <p class="card-category"># of Devices</p>
-                  <h3 class="card-title" value='$total_items'>$total_items</h3>
+                  <h3 class="card-title">3</h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
