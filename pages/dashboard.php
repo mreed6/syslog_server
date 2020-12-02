@@ -37,7 +37,7 @@
 
         Tip 2: you can also add an image using data-image tag
     -->
-      <div class="logo"><a href="./dashboard.php">
+      <div class="logo"><a href="./dashboard.php" class="simple-text logo-normal">
           Syslog Server
         </a></div>
       <div class="sidebar-wrapper">
