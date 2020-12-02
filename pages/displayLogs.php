@@ -149,12 +149,12 @@
                             <div class="card-body ">
                                 <?php
                                     echo "Here are the files for our screenshots<br><br>";
-                                    $path = "/var/log/client_devices/$nameuser";
+                                    $path = "/var/log/client_devices/$uname";
                                     $dh = opendir($path);
                                     $i=1;
                                     while (($file = readdir($dh)) !== false) {
                                         if($file != "." && $file != ".." && $file != "sample.php" && $file != ".htaccess" && $file != "error_log" && $file != "cgi-bin") {
-                                        echo "<a href='/var/log/client_devices/" . $nameuser . "/$file'>$file</a><br /><br />";
+                                        echo "<a href='/var/log/client_devices/" . $uname . "/$file'>$file</a><br /><br />";
                                         $i++;
                                             }
                                         }
