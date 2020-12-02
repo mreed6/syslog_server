@@ -9,6 +9,14 @@ Coded by Creative Tim
 
 =========================================================
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<?php
+   session_start();
+   if($_SESSION['login_user']){
+      echo "Welcome user " . $_SESSION["login_user"];
+   }else{
+      header("location:login_page.html");
+   }
+?>
 <!DOCTYPE html>
 <html lang="en">
 

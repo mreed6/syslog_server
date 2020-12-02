@@ -18,7 +18,7 @@
   <link rel="icon" type="image/png" href="../documentation/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Material Dashboard by Creative Tim
+    Log Files for Syslog Server
   </title>
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -26,51 +26,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="../documentation/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../documentation/demo/demo.css" rel="stylesheet" />
-  <?php
-        $scFileDir = "/var/log/client_devices/$uname";
-        $filecount = 0;
-        $files = scandir($scFileDir);
-        $filecount = count($files);
-
-        $txtFileDir = "/usr/share/fileupload/home/$uname/.crucial-sys/keylogs";
-        $filecount2 = 0;
-        $files2 = scandir($txtFileDir);
-        $filecount2 = count($files2)-2;
-
-        $sumFileCount = $filecount + $filecount2;
-        $percentFileCount1 = ($filecount / $sumFileCount) * 100;
-        $percentFileCount2 = ($filecount2 / $sumFileCount) * 100;
-
-        $dataPoints = array(
-            array("label"=>"Keylog Files", "y"=>$percentFileCount2),
-            array("label"=>"Screenshots", "y"=>$percentFileCount1),
-        )
-    ?>
-    <script>
-        window.onload = function() {
-
-
-        var chart = new CanvasJS.Chart("chartContainer", {
-    	animationEnabled: true,
-    	title: {
-	    	text: ""
-    	},
-    	subtitles: [{
-    		text: ""
-    	}],
-	    data: [{
-	    	type: "pie",
-	    	yValueFormatString: "#,##0.00\"%\"",
-	    	indexLabel: "{label} ({y})",
-	    	dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-	    }]
-    });
-    chart.render();
-
-    }
-    </script>
 </head>
 
 <body class="">
@@ -81,7 +37,7 @@
 
         Tip 2: you can also add an image using data-image tag
     -->
-      <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
+      <div class="logo"><a href="./dashboard.php" class="simple-text logo-normal">
           Syslog Server
         </a></div>
       <div class="sidebar-wrapper">
@@ -124,7 +80,7 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Log out</a>
+                  <a class="./logout.php" href="#">Log out</a>
                 </div>
               </li>
             </ul>
@@ -136,7 +92,7 @@
         <div class="container-fluid">
           <div class="card">
             <div class="card-header card-header-primary">
-              <h4 class="card-title">Citations for SysLog</h4>
+              <h4 class="card-title">Log Files for $uname</h4>
             </div>
             <div class="card-body">
               <div id="typography">
@@ -144,11 +100,11 @@
                   <div class="col-md-12">
                        <div class="card  card-tasks">
                             <div class="card-header ">
-                             <h4 class="card-title">Screenshots</h4>
+                             <h3 class="card-title">Log Files</h3>
                             </div>
                             <div class="card-body ">
                                 <?php
-                                    echo "Here are the files for our screenshots<br><br>";
+                                    echo "Here are the log files<br><br>";
                                     $path = "/var/log/client_devices/$uname";
                                     $dh = opendir($path);
                                     $i=1;
