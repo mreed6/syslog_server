@@ -201,13 +201,12 @@
 	                    $i=1;
 	                    while (($filename = readdir($dh)) !== false) {
                         	if($filename != "." && $filename != ".." && $filename != "sample.php" && $filename != ".htaccess" && $filename != "error_log" && $filename != "cgi-bin") {
-                            echo "<form action='displayLogs.php' method='post'><input type='hidden' name='uname' value='$filename'><button type='submit' class='btn btn-primary'><b>$filename</b></button></form><br /><br />";
-                           $i++;
-    					       	}
-				    	}
+                                echo "<form action='displayLogs.php' method='post'><input type='hidden' name='nameuser' value='$filename'><button type='submit' class='btn btn-primary'><b>$filename</b></button></form><br /><br />";
+                                $i++;
+    					       	    }
+				    	    }
 				    	closedir($dh);
 				    ?>
-
                     </div>
                     <div class="tab-pane" id="messages">
                     </div>

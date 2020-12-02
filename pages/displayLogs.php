@@ -1,13 +1,13 @@
 <?php
+    $uname = $_POST["nameuser"];
+?>
+<?php
    session_start();
    if($_SESSION['login_user']){
       echo "Welcome user " . $_SESSION["login_user"];
    }else{
       header("location:login_page.html");
    }
-?>
-<?php
-    $uname = $_POST["uname"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
