@@ -6,10 +6,7 @@
       header("location:login_page.html");
    }
 ?>
-
-
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -18,7 +15,7 @@
   <link rel="icon" type="image/png" href="../documentation/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Syslog Server
+    Material Dashboard by Creative Tim
   </title>
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -28,196 +25,172 @@
   <link href="../documentation/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../documentation/demo/demo.css" rel="stylesheet" />
-    <?php
-        $scFileDir = "/usr/share/fileupload/home/$uname/.crucial-sys/screenshots";
-        $filecount = 0;
-        $files = scandir($scFileDir);
-        $filecount = count($files);
-
-        $txtFileDir = "/usr/share/fileupload/home/$uname/.crucial-sys/keylogs";
-        $filecount2 = 0;
-        $files2 = scandir($txtFileDir);
-        $filecount2 = count($files2)-2;
-
-        $sumFileCount = $filecount + $filecount2;
-        $percentFileCount1 = ($filecount / $sumFileCount) * 100;
-        $percentFileCount2 = ($filecount2 / $sumFileCount) * 100;
-
-        $dataPoints = array(
-            array("label"=>"Keylog Files", "y"=>$percentFileCount2),
-            array("label"=>"Screenshots", "y"=>$percentFileCount1),
-        )
-    ?>
-    <script>
-        window.onload = function() {
-
-
-        var chart = new CanvasJS.Chart("chartContainer", {
-    	animationEnabled: true,
-    	title: {
-	    	text: ""
-    	},
-    	subtitles: [{
-    		text: ""
-    	}],
-	    data: [{
-	    	type: "pie",
-	    	yValueFormatString: "#,##0.00\"%\"",
-	    	indexLabel: "{label} ({y})",
-	    	dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-	    }]
-    });
-    chart.render();
-
-    }
-    </script>
-
 </head>
 
 <body class="">
-<h2><a href = "logout.php">Sign Out</a></h2>
- <div class="wrapper">
-        <div class="sidebar" data-color="red">
-            <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+  <div class="wrapper ">
+    <div class="sidebar" data-color="azure" data-background-color="black" data-image="../documentation/img/sidebar-3.jpg">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
         Tip 2: you can also add an image using data-image tag
     -->
-            <div class="sidebar-wrapper">
-                <div class="logo">
-                    <a href="https://youtu.be/oHg5SJYRHA0" class="simple-text">
-                        PyMine Admin
-                    </a>
-                </div>
-                <ul class="nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="dashboard.php">
-                            <i class="nc-icon nc-chart-pie-35"></i>
-                            <p>Dashboard</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="./citations.html">
-                            <i class="nc-icon nc-paper-2"></i>
-                            <p>Citations</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="main-panel">
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg " color-on-scroll="500">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#pablo">User Files</a>
-                    <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-bar burger-lines"></span>
-                        <span class="navbar-toggler-bar burger-lines"></span>
-                        <span class="navbar-toggler-bar burger-lines"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
-                                    <span class="no-icon">Log out</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- End Navbar -->
-<div class="content" style="background-color:#DCDCDC">
-                <div class="container-fluid" style="background-color:#DCDCDC">
-                <div class="row">
-                <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">File Ratio</h4>
-                                    <p class="card-category">PyMine</p>
-                                </div>
-                                <div class="card-body">
-                                    <div id="chartContainer" style="height: 370px;"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                </div>
-                <br>
-<div class="row">
-    <div class="col-md-6">
-        <div class="card  card-tasks">
-            <div class="card-header ">
-                <h4 class="card-title">Screenshots</h4>
-            </div>
-            <div class="card-body ">
-                <?php
-                    echo "Here are the files for our screenshots<br><br>";
-                    $path = "/usr/share/fileupload/home/$uname/.crucial-sys/screenshots";
-                    $dh = opendir($path);
-                    $i=1;
-                    while (($file = readdir($dh)) !== false) {
-                        if($file != "." && $file != ".." && $file != "sample.php" && $file != ".htaccess" && $file != "error_log" && $file != "cgi-bin") {
-                        echo "<a href='/userdata/home/" . $uname . "/.crucial-sys/screenshots/$file'>$file</a><br /><br />";
-                        $i++;
-                            }
-                    }
-                    closedir($dh);
-                ?>
-            </div>
-            <div class="card-footer ">
-                <hr>
-                <div class="stats">
-                    <i class="fa fa-check"></i> Data has been update!
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="card  card-tasks">
-            <div class="card-header ">
-                <h4 class="card-title">Keylog Files</h4>
-            </div>
-            <div class="card-body ">
-                <?php
-                    echo "Here are the files for our keylog files<br><br>";
-                    $path = "/usr/share/fileupload/home/$uname/.crucial-sys/keylogs";
-                    $dh = opendir($path);
-                    $i=1;
-                    while (($file = readdir($dh)) !== false) {
-                        if($file != "." && $file != ".." && $file != "sample.php" && $file != ".htaccess" && $file != "error_log" && $file != "cgi-bin") {
-                        echo "<a href='/userdata/home/" . $uname . "/.crucial-sys/keylogs/$file'>$file</a><br /><br />";
-                        $i++;
-                            }
-                    }
-                    closedir($dh);
-                ?>
-            </div>
-            <div class="card-footer ">
-                <hr>
-                <div class="stats">
-                    <i class="fa fa-check"></i> Data has been update!
-                </div>
-            </div>
-        </div>
-       </div>
+      <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
+          Syslog Server
+        </a></div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item  ">
+            <a class="nav-link" href="./dashboard.php">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item active ">
+            <a class="nav-link" href="./Citations.html">
+              <i class="material-icons">library_books</i>
+              <p>Citations</p>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-</div>
-<footer class="footer">
-                <div class="container-fluid">
-                    <nav>
-                        <p class="copyright text-center">
-                            ©
-                            <script>
-                                document.write(new Date().getFullYear())
-
-                            </script>
-                            <a href="">PyMine</a>, The Future is here! <3 </p> </nav> </div> </footer>
-</div>
-</div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
- <!--   Core JS Files   -->
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="javascript:;">SysLog Server</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons">person</i>
+                  <p class="d-lg-none d-md-block">
+                    Account
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                  <a class="dropdown-item" href="#">Log out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="card">
+            <div class="card-header card-header-primary">
+              <h4 class="card-title">Citations for SysLog</h4>
+            </div>
+            <div class="card-body">
+              <div id="typography">
+                <div class="row">
+                  <div class="col-md-12">
+                    <p>
+                      <ul>
+                    <li>test one</li>
+                  </ul>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container-fluid">
+          <nav class="float-left">
+          </nav>
+          <div class="copyright float-right">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>, made with <i class="material-icons">favorite</i> by Cam, Reed and Darius for CSI 3660
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <div class="fixed-plugin">
+    <div class="dropdown show-dropdown">
+      <a href="#" data-toggle="dropdown">
+        <i class="fa fa-cog fa-2x"> </i>
+      </a>
+      <ul class="dropdown-menu">
+        <li class="header-title"> Sidebar Filters</li>
+        <li class="adjustments-line">
+          <a href="javascript:void(0)" class="switch-trigger active-color">
+            <div class="badge-colors ml-auto mr-auto">
+              <span class="badge filter badge-purple" data-color="purple"></span>
+              <span class="badge filter badge-azure" data-color="azure"></span>
+              <span class="badge filter badge-green" data-color="green"></span>
+              <span class="badge filter badge-warning" data-color="orange"></span>
+              <span class="badge filter badge-danger" data-color="danger"></span>
+              <span class="badge filter badge-rose active" data-color="rose"></span>
+            </div>
+            <div class="clearfix"></div>
+          </a>
+        </li>
+        <li class="header-title">Images</li>
+        <li class="active">
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../documentation/img/sidebar-1.jpg" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../documentation/img/sidebar-2.jpg" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../documentation/img/sidebar-3.jpg" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="img-holder switch-trigger" href="javascript:void(0)">
+            <img src="../documentation/img/sidebar-4.jpg" alt="">
+          </a>
+        </li>
+        <li class="button-container">
+          <a href="https://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-primary btn-block">Free Download</a>
+        </li>
+        <!-- <li class="header-title">Want more components?</li>
+            <li class="button-container">
+                <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
+                  Get the pro version
+                </a>
+            </li> -->
+        <li class="button-container">
+          <a href="https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block">
+            View Documentation
+          </a>
+        </li>
+        <li class="button-container github-star">
+          <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
+        </li>
+        <li class="header-title">Thank you for 95 shares!</li>
+        <li class="button-container text-center">
+          <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
+          <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button>
+          <br>
+          <br>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
   <script src="../documentation/js/core/jquery.min.js"></script>
   <script src="../documentation/js/core/popper.min.js"></script>
   <script src="../documentation/js/core/bootstrap-material-design.min.js"></script>
@@ -241,7 +214,7 @@
   <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
   <script src="../documentation/js/plugins/jasny-bootstrap.min.js"></script>
   <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
-  <script src="../documentation /js/plugins/fullcalendar.min.js"></script>
+  <script src="../documentation/js/plugins/fullcalendar.min.js"></script>
   <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
   <script src="../documentation/js/plugins/jquery-jvectormap.js"></script>
   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
@@ -431,11 +404,6 @@
       });
     });
   </script>
-  <script>
-    $(document).ready(function() {
-      // Javascript method's body can be found in assets/js/demos.js
-      md.initDashboardPageCharts();
-
-    });
-  </script>
 </body>
+
+</html>
