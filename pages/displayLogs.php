@@ -28,7 +28,7 @@
   <link href="../documentation/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
   <link href="../documentation/demo/demo.css" rel="stylesheet" />
   <?php
-    $total_items  = count( glob("/var/log/client_devices/$uname/*", GLOB_ONLYDIR) );
+    $total_items  = count( glob("/var/log/client_devices/$uname/*.*", GLOB_ONLYDIR) );
   ?>
 </head>
 
@@ -104,7 +104,7 @@
               <div class="card card-stats">
                 <div class="card-header card-header-success card-header-icon">
                   <div class="card-icon">
-                    <i class="material-icons">letter</i>
+                    <i class="material-icons">content_copy</i>
                   </div>
                   <p class="card-category"># of Logs</p>
                   <h3 class="card-title"><?php echo $total_items; ?></h3>
