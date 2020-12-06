@@ -32,7 +32,6 @@
 </head>
 
 <body class="">
-<h2><a href = "logout.php">Sign Out</a></h2>
   <div class="wrapper ">
     <div class="sidebar" data-color="azure" data-background-color="black" data-image="../documentation/img/sidebar-1.jpg">
       <!--
@@ -52,7 +51,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./Citations.html">
+            <a class="nav-link" href="./Citations.php">
               <i class="material-icons">library_books</i>
               <p>Citations</p>
             </a>

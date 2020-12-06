@@ -52,7 +52,7 @@
             </a>
           </li>
           <li class="nav-item active ">
-            <a class="nav-link" href="./Citations.html">
+            <a class="nav-link" href="./Citations.php">
               <i class="material-icons">library_books</i>
               <p>Citations</p>
             </a>
