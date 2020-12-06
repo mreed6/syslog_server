@@ -93,13 +93,7 @@
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
-          <div class="card">
-            <div class="card-header card-header-primary">
-              <h4 class="card-title">Log Files for <?php echo $uname; ?></h4>
-            </div>
-            <div class="card-body">
-              <div id="typography">
-              <div class="row">
+        <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
               <div class="card card-stats">
                 <div class="card-header card-header-success card-header-icon">
@@ -117,6 +111,13 @@
               </div>
             </div>
           </div>
+          <div class="card">
+            <div class="card-header card-header-primary">
+              <h4 class="card-title">Log Files for <?php echo $uname; ?></h4>
+            </div>
+            <div class="card-body">
+              <div id="typography">
+
                 <div class="row">
                   <div class="col-md-12">
                        <div class="card  card-tasks">
