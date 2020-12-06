@@ -83,7 +83,7 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="./logout.php" href="./logout.php">Log out</a>
+                  <a class="dropdown-item" href="./logout.php">Log out</a>
                 </div>
               </li>
             </ul>
