@@ -97,9 +97,14 @@
                 <div class="row">
                   <div class="col-md-12">
                     <p>
-                      <ul>
-                    <li>test one</li>
-                  </ul>
+                      <ol>
+                    <li>https://www.tecmint.com/install-rsyslog-centralized-logging-in-centos-ubuntu/</li>
+                    <li>https://bootsnipp.com/snippets/7nk08</li>
+                    <li>https://www.creative-tim.com/templates/free</li>
+                    <li>https://www.tutorialspoint.com/php/php_mysql_login.htm</li>
+                    <li>https://www.w3schools.com/</li>
+                    <li>Dr. Bowers</li>
+                  </ol>
                     </p>
                   </div>
                 </div>
