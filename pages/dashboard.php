@@ -26,7 +26,7 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../documentation/demo/demo.css" rel="stylesheet" />
   <?php
-    $total_items  = count( glob("/var/log/client_devices/", GLOB_ONLYDIR) );
+    $total_items  = count( glob("/var/log/client_devices/*", GLOB_ONLYDIR) );
   ?>
 
 </head>
