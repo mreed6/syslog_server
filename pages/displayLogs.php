@@ -28,7 +28,7 @@
   <link href="../documentation/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
   <link href="../documentation/demo/demo.css" rel="stylesheet" />
   <?php
-    $total_items  = count( glob("/var/log/client_devices/" . $uname . "/*.*", GLOB_ONLYDIR) );
+    $total_items  = count( glob("/var/log/client_devices/$uname/*") );
   ?>
 </head>
 
