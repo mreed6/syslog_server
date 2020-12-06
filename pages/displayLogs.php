@@ -27,6 +27,9 @@
   <!-- CSS Files -->
   <link href="../documentation/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
   <link href="../documentation/demo/demo.css" rel="stylesheet" />
+  <?php
+    $total_items  = count( glob("/var/log/client_devices/$uname/*", GLOB_ONLYDIR) );
+  ?>
 </head>
 
 <body class="">
@@ -96,6 +99,24 @@
             </div>
             <div class="card-body">
               <div id="typography">
+              <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="card card-stats">
+                <div class="card-header card-header-success card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">letter</i>
+                  </div>
+                  <p class="card-category"># of Logs</p>
+                  <h3 class="card-title"><?php echo $total_items; ?></h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">date_range</i> Last 24 Hours
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
                 <div class="row">
                   <div class="col-md-12">
                        <div class="card  card-tasks">
