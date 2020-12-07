@@ -50,18 +50,19 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./Citations.php">
-              <i class="material-icons">library_books</i>
-              <p>Citations</p>
-            </a>
-          </li>
             <li class="nav-item ">
                 <a class="nav-link" href="./about.php">
                     <i class="material-icons">perm_device_information</i>
                     <p>About Page</p>
                 </a>
             </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./Citations.php">
+              <i class="material-icons">library_books</i>
+              <p>Citations</p>
+            </a>
+          </li>
+
         </ul>
       </div>
     </div>
