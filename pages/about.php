@@ -1,3 +1,11 @@
+<?php
+session_start();
+if($_SESSION['login_user']){
+    echo "Welcome user " . $_SESSION["login_user"];
+}else{
+    header("location:login_page.html");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,7 +54,7 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="./about.html">
+                    <a class="nav-link" href="./about.php">
                         <i class="material-icons">perm_device_information</i>
                         <p>About Page</p>
                     </a>
@@ -312,9 +320,9 @@
             });
 
             $('.switch-sidebar-mini input').change(function() {
-                $body = $('body');
+                $body = $body('body');
 
-                $input = $(this);
+                $input = $body(this);
 
                 if (md.misc.sidebar_mini_active == true) {
                     $('body').removeClass('sidebar-mini');
