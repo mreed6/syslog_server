@@ -57,7 +57,7 @@
                     <p>About Page</p>
                 </a>
             </li>
-          <li class="nav-item active ">
+          <li class="nav-item ">
             <a class="nav-link" href="./Citations.php">
               <i class="material-icons">library_books</i>
               <p>Citations</p>
