@@ -119,7 +119,13 @@ if($_SESSION['login_user']){
                             <div class="card-body">
                                 <div class="tab-content">
                                     <div class="tab-pane active" id="profile">
-                                       <p>This is where our about project information would go. Basically just a paste and go</p>
+                                       <p>
+                                       Project summary describing the project as a whole
+                                          <ul>
+                                              <li>Our class project is that we are making a syslog server that will gather logs from client computers, or hardware, and store them on the server for an Admin to view and look at. It keeps it organized and easy to access and read for all Administrators trying to monitor these devices
+</li>
+                                          </ul>
+                                       </p>
                                     </div>
                                 </div>
                             </div>
