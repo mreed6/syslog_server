@@ -222,31 +222,31 @@ if($_SESSION['login_user']){
 </ul>
 <h4>Screenshots of the Project in Action:</h4>
 <ol>
-    <li><img src="../documentation/img/vm1.png" alt="oppsie woopsie uwu looks like this image is broken"></li>
+    <li><img src="../documentation/img/vm1.png" width="100%" alt="oppsie woopsie uwu looks like this image is broken"></li>
         <ul>
             <li>
             The picture above shows the saved log file paths.
             </li>
         </ul>
-    <li><img src="../documentation/img/vm2.png" alt="oppsie woopsie uwu looks like this image is broken"></li>
+    <li><img src="../documentation/img/vm2.png" width="100%" alt="oppsie woopsie uwu looks like this image is broken"></li>
     <ul>
             <li>
             The picture above shows the client devise we have on the syslog server host machine.
             </li>
         </ul>
-    <li><img src="../documentation/img/vm3.png" alt="oppsie woopsie uwu looks like this image is broken"></li>
+    <li><img src="../documentation/img/vm3.png" width="100%" alt="oppsie woopsie uwu looks like this image is broken"></li>
     <ul>
             <li>
             The picture above shows the configuration file for the Syslog server
             </li>
         </ul>
-    <li><img src="../documentation/img/vm4.png" alt="oppsie woopsie uwu looks like this image is broken"></li>
+    <li><img src="../documentation/img/vm4.png" width="100%" alt="oppsie woopsie uwu looks like this image is broken"></li>
     <ul>
             <li>
             The picture above shows the bash script for our backup scheme using rsync
             </li>
         </ul>
-    <li><img src="../documentation/img/vm5.png" alt="oppsie woopsie uwu looks like this image is broken"></li>
+    <li><img src="../documentation/img/vm5.png" width="100%" alt="oppsie woopsie uwu looks like this image is broken"></li>
     <ul>
             <li>
             The picture above shows the file location as to where the backup is being saved at
@@ -258,7 +258,7 @@ if($_SESSION['login_user']){
             The picture above shows the dashboard of our client devices
             </li>
         </ul>
-    <li><img src="../documentation/img/webpage2.png" alt="oppsie woopsie uwu looks like this image is broken"></li>
+    <li><img src="../documentation/img/webpage2.png" width="100%" alt="oppsie woopsie uwu looks like this image is broken"></li>
     <ul>
             <li>
             The picture above shows the shows the log files of a client device
