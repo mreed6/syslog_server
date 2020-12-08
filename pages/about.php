@@ -120,25 +120,114 @@ if($_SESSION['login_user']){
                                 <div class="tab-content">
                                     <div class="tab-pane active" id="profile">
                                        <p>
-                                       Project summary, describing the project as a whole:
-                                          <ul>
-                                              <li>Our class project is that we are making a syslog server that will gather logs from client computers, or hardware, and store them on the server for an Admin to view and look at. It keeps it organized and easy to access and read for all Administrators trying to monitor these devices
-                                              </li>
-                                          </ul>
-                                       Background:
-                                       <ul>
-                                       <li>
-                                       How to use the service: the user would request from the Admin of the Syslog server that they would like to have their system logs organized and backed up on a daily basis. They would then be added to the Syslog server database, and organized through the Syslog host machine. Their logs would then be associated with their username via the online Admin Dashboard where the Admin can see all the clients organized and backed up system logs that have their device name on it.
-                                       </li>
-                                       </ul>
-                                       Project Overview Describing:
-                                       <ul>
-                                       <ol> What is the service?
-                                       <li>
-This service provides the System administrator to easily keep track of all the system log files for all the devices in the departments or etc… this interface allows him/her to log in and easily view all these files to read and see what is happening on what device/system
-                                       </li>
-                                       </ol>
-                                       </ul>
+                                       <p>
+   Project summary, describing the project as a whole
+<ul>
+   <li>Our class project is that we are making a syslog server that will gather logs from client computers, or hardware, and store them on the server for an Admin to view and look at. It keeps it organized and easy to access and read for all Administrators trying to monitor these devices
+   </li>
+</ul>
+Background
+<ul>
+   <li>
+      How to use the service: the user would request from the Admin of the Syslog server that they would like to have their system logs organized and backed up on a daily basis. They would then be added to the Syslog server database, and organized through the Syslog host machine. Their logs would then be associated with their username via the online Admin Dashboard where the Admin can see all the clients organized and backed up system logs that have their device name on it.
+   </li>
+</ul>
+Project overview describing
+<ul>
+   <li>What is the service?</li>
+   <ul>
+      <li>
+         This service provides the System administrator to easily keep track of all the system log files for all the devices in the departments or etc… this interface allows him/her to log in and easily view all these files to read and see what is happening on what device/system
+      </li>
+   </ul>
+   <li>How to implement the service?</li>
+   <ul>
+      <li>
+         To implement this service you would need to enable rsyslog service on the main server, and configure the rsyslog.conf file to enable traffic coming from outside sources on TCP port 514, or UDP port 514 or both. Then specify the path of all incoming traffic to a specific spot on the machine.
+      </li>
+      <li>
+         To enable file redirection you need to open rsyslog.conf file and input "$template RemoteLogs,"/var/log/client_devices/%HOSTNAME%/%PROGRAMNAME%.log""
+      </li>
+      <ul>
+         <li>In this example we stored ours in the “client_devices” path, you can make that any directory you wish.</li>
+         <ul>
+            <li>Restart the service for rsyslog with “sudo systemctl restart rsyslog”</li>
+         </ul>
+      </ul>
+   </ul>
+   <li>After the server in set up, you need to enable the same syslog service on the device and edit the rsyslog.conf file to allow file transfer being sent to @@’ipaddress’:’portnumber’ ours would be @@35.223.28.98:514 at the end of the rsyslog.conf file</li>
+   <ul>
+      <li>
+         Restart the service the same way you restarted the service on the server.
+      </li>
+   </ul>
+</ul>
+Group member contribution
+<ul>
+   <li>Camron Grant:</li>
+   <ul>
+      <li>
+         Created test VMs outside of the internal ip where the syslog server was held
+      </li>
+      <li>
+         Created Citations page
+      </li>
+      <li>
+         Created a php function to count the number of logs and users
+      </li>
+      <li>
+         Linked the logout php function that Darius created to all the webpages
+      </li>
+      <li>
+         Overall site clean up
+      </li>
+      <li>
+         Project Report page
+      </li>
+   </ul>
+</ul>
+<ul>
+   <li>Darius Banks:</li>
+   <ul>
+      <li>
+         Create PHPMyAdmin Database containing administrator login information.
+      </li>
+      <li>
+         Administrator Login pages including PHP code to connect to database, login, and logout.
+      </li>
+   </ul>
+</ul>
+<ul>
+   <li>Michael Reed:</li>
+   <ul>
+      <li>
+         Create the syslog server in google cloud vm centos 7, rsyslog was installed and updated on the vm and configured the rsyslog.conf file to be able to receive logs through a tcp 514 port and UDP port 514
+      </li>
+      <li>
+         Started the rsyslog service on the vm
+      </li>
+      <li>
+         Also created a directory path to store all incoming client log files and store them on the server.
+         <ul>
+            <li>
+               Enabled the rsyslog.conf file to direct all files to specified path of $template RemoteLogs,”/var/log/client_devices/%HOSTNAME%/%PROGRAMNAME%.log””
+            </li>
+         </ul>
+      </li>
+      <li>
+         Created PHP Dashboard and the PHP log file page to display devices and devices logs when clicking on specified device name in page
+      </li>
+   </ul>
+</ul>
+Screenshots of the Project in Action:
+<ul>
+    <li><img src="" alt="host client service"></li>
+    <li><img src="" alt="list of clients on host"></li>
+    <li><img src="" alt="rsync editing to 524"></li>
+    <li><img src="" alt="web interface showing clients"></li>
+    <li><img src="" alt="web interface showing client logs"></li>
+</ul>
+</p>
                                        </p>
                                     </div>
                                 </div>
