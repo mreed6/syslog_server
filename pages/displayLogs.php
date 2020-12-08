@@ -138,7 +138,7 @@
                                     $i=1;
                                     while (($file = readdir($dh)) !== false) {
                                         if($file != "." && $file != ".." && $file != "sample.php" && $file != ".htaccess" && $file != "error_log" && $file != "cgi-bin") {
-                                        echo "<a href='/var/log/client_devices/" . $uname . "/$file'>$file</a><br /><br />";
+                                        echo "<a href='/logfiles/" . $uname . "/$file'>$file</a><br /><br />";
                                         $i++;
                                             }
                                         }
