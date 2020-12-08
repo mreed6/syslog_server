@@ -222,7 +222,7 @@ if($_SESSION['login_user']){
 </ul>
 <h4>Screenshots of the Project in Action:</h4>
 <ul>
-    <li><img src="" alt="oppsie woopsie uwu looks like this image is broken"></li>
+    <li><img src="../documentation/img/vm1.png" alt="oppsie woopsie uwu looks like this image is broken"></li>
     <li><img src="" alt="oppsie woopsie uwu looks like this image is broken"></li>
     <li><img src="" alt="oppsie woopsie uwu looks like this image is broken"></li>
     <li><img src="" alt="oppsie woopsie uwu looks like this image is broken"></li>
