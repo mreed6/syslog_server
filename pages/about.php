@@ -123,7 +123,7 @@ if($_SESSION['login_user']){
                                        <p>
 <h4> Project summary</h4>
 <ul>
-   <li>Our class project is that we are making a syslog server that will gather logs from client computers, or hardware, and store them on the server for an Admin to view and look at. It keeps it organized and easy to access and read for all Administrators trying to monitor these devices
+   <li>Our class project is that we are making a syslog server that will gather logs from client computers, or hardware, and store them on the server for an Admin to view and look at. It keeps it organized, easy to access and easy to read for all Administrators trying to monitor these devices.
    </li>
 </ul>
 <h4>Background</h4>
@@ -137,7 +137,7 @@ if($_SESSION['login_user']){
    <li>What is the service?</li>
    <ul>
       <li>
-         This service provides the System administrator to easily keep track of all the system log files for all the devices in the departments or etc… this interface allows him/her to log in and easily view all these files to read and see what is happening on what device/system
+         This service provides the System administrator to easily keep track of all the system log files for all the devices in the departments or etc… this interface allows him/her to log in and easily view all these files to read and see what is happening on what device/system.
       </li>
    </ul>
    <li>How to implement the service?</li>
@@ -154,7 +154,7 @@ if($_SESSION['login_user']){
             <li>Restart the service for rsyslog with “sudo systemctl restart rsyslog”</li>
          </ul>
       </ul>
-      <li>After the server in set up, you need to enable the same syslog service on the device and edit the rsyslog.conf file to allow file transfer being sent to @@’ipaddress’:’portnumber’ ours would be @@35.223.28.98:514 at the end of the rsyslog.conf file</li>
+      <li>After the server in set up, you need to enable the same syslog service on the device and edit the rsyslog.conf file to allow file transfer being sent to @@’ipaddress’:’portnumber’ ours would be @@35.223.28.98:514 at the end of the rsyslog.conf file.</li>
    <ul>
       <li>
          Restart the service the same way you restarted the service on the server.
@@ -168,22 +168,22 @@ if($_SESSION['login_user']){
    <li>Camron Grant:</li>
    <ul>
       <li>
-         Created test VMs outside of the internal ip where the syslog server was held
+         Created test VMs outside of the internal ip where the syslog server was held.
       </li>
       <li>
-         Created Citations page
+         Created Citations page.
       </li>
       <li>
-         Created a php function to count the number of logs and users
+         Created a php function to count the number of logs and users.
       </li>
       <li>
-         Linked the logout php function that Darius created to all the webpages
+         Linked the logout php function that Darius created to all the webpages.
       </li>
       <li>
-         Overall site clean up
+         Overall site clean up.
       </li>
       <li>
-         Project Report page
+         Project About Page.
       </li>
    </ul>
 </ul>
@@ -202,10 +202,10 @@ if($_SESSION['login_user']){
    <li>Michael Reed:</li>
    <ul>
       <li>
-         Create the syslog server in google cloud vm centos 7, rsyslog was installed and updated on the vm and configured the rsyslog.conf file to be able to receive logs through a tcp 514 port and UDP port 514
+         Create the syslog server in google cloud vm centos 7, rsyslog was installed and updated on the vm and configured the rsyslog.conf file to be able to receive logs through a tcp 514 port and UDP port 514.
       </li>
       <li>
-         Started the rsyslog service on the vm
+         Started the rsyslog service on the vm.
       </li>
       <li>
          Also created a directory path to store all incoming client log files and store them on the server.
@@ -216,7 +216,7 @@ if($_SESSION['login_user']){
          </ul>
       </li>
       <li>
-         Created PHP Dashboard and the PHP log file page to display devices and devices logs when clicking on specified device name in page
+         Created PHP Dashboard and the PHP log file page to display devices and devices logs when clicking on specified device name in page.
       </li>
    </ul>
 </ul>
