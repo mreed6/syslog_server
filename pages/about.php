@@ -222,11 +222,13 @@ if($_SESSION['login_user']){
 </ul>
 <h4>Screenshots of the Project in Action:</h4>
 <ul>
-    <li><img src="" alt="host client service"></li>
-    <li><img src="" alt="list of clients on host"></li>
-    <li><img src="" alt="rsync editing to 514"></li>
-    <li><img src="" alt="web interface showing clients"></li>
-    <li><img src="" alt="web interface showing client logs"></li>
+    <li><img src="" alt="oppsie woopsie uwu looks like this image is broken"></li>
+    <li><img src="" alt="oppsie woopsie uwu looks like this image is broken"></li>
+    <li><img src="" alt="oppsie woopsie uwu looks like this image is broken"></li>
+    <li><img src="" alt="oppsie woopsie uwu looks like this image is broken"></li>
+    <li><img src="" alt="oppsie woopsie uwu looks like this image is broken"></li>
+    <li><img src="" alt="oppsie woopsie uwu looks like this image is broken"></li>
+    <li><img src="" alt="oppsie woopsie uwu looks like this image is broken"></li>
 </ul>
 </p>
 </p>
