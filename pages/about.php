@@ -120,11 +120,25 @@ if($_SESSION['login_user']){
                                 <div class="tab-content">
                                     <div class="tab-pane active" id="profile">
                                        <p>
-                                       Project summary describing the project as a whole
+                                       Project summary, describing the project as a whole:
                                           <ul>
                                               <li>Our class project is that we are making a syslog server that will gather logs from client computers, or hardware, and store them on the server for an Admin to view and look at. It keeps it organized and easy to access and read for all Administrators trying to monitor these devices
-</li>
+                                              </li>
                                           </ul>
+                                       Background:
+                                       <ul>
+                                       <li>
+                                       How to use the service: the user would request from the Admin of the Syslog server that they would like to have their system logs organized and backed up on a daily basis. They would then be added to the Syslog server database, and organized through the Syslog host machine. Their logs would then be associated with their username via the online Admin Dashboard where the Admin can see all the clients organized and backed up system logs that have their device name on it.
+                                       </li>
+                                       </ul>
+                                       Project Overview Describing:
+                                       <ul>
+                                       <ol> What is the service?
+                                       <li>
+This service provides the System administrator to easily keep track of all the system log files for all the devices in the departments or etc… this interface allows him/her to log in and easily view all these files to read and see what is happening on what device/system
+                                       </li>
+                                       </ol>
+                                       </ul>
                                        </p>
                                     </div>
                                 </div>
