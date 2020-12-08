@@ -252,7 +252,7 @@ if($_SESSION['login_user']){
             The picture above shows the file location as to where the backup is being saved at
             </li>
         </ul>
-    <li><img src="../documentation/img/webpage1.png" alt="oppsie woopsie uwu looks like this image is broken"></li>
+    <li><img src="../documentation/img/webpage1.png" width="100%" alt="oppsie woopsie uwu looks like this image is broken"></li>
     <ul>
             <li>
             The picture above shows the dashboard of our client devices
