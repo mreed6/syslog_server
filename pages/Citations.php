@@ -111,6 +111,10 @@
                     <li>https://www.tutorialspoint.com/php/php_mysql_login.htm</li>
                     <li>https://www.w3schools.com/</li>
                     <li>Dr. Bowers</li>
+                    <li>https://medium.com/@fotios.floros/linux-backup-script-1722cc9c2bf6</li>
+                    <li>https://stackoverflow.com/questions/34753831/execute-a-shell-script-everyday-at-specific-time/34754109</li>
+                    <li>https://unix.stackexchange.com/questions/392780/how-to-schedule-an-rsync-command</li>
+                    <li>https://averagelinuxuser.com/automatically-backup-linux/</li>
                   </ol>
                     </p>
                   </div>

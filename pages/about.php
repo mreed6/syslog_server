@@ -123,7 +123,7 @@ if($_SESSION['login_user']){
                                        <p>
 <h4> Project summary</h4>
 <ul>
-   <li>Our class project is that we are making a syslog server that will gather logs from client computers, or hardware, and store them on the server for an Admin to view and look at. It keeps it organized, easy to access and easy to read for all Administrators trying to monitor these devices.
+   <li>Our class project is that we are making a syslog server that will gather logs from client computers, or hardware, and store them on the server for an Admin to view and look at. It keeps it organized, easy to access and easy to read for all Administrators trying to monitor these devices. There is also a backup scheme that runs once a day, and it keeps all of the clients logs save and secure.
    </li>
 </ul>
 <h4>Background</h4>
@@ -137,7 +137,7 @@ if($_SESSION['login_user']){
    <li>What is the service?</li>
    <ul>
       <li>
-         This service provides the System administrator to easily keep track of all the system log files for all the devices in the departments or etc… this interface allows him/her to log in and easily view all these files to read and see what is happening on what device/system.
+         This service provides the System administrator to easily keep track of all the system log files for all the devices in the departments or etc… This interface allows him/her to log in and easily view all these files to read and see what is happening on what device/system.
       </li>
    </ul>
    <li>How to implement the service?</li>
@@ -183,7 +183,7 @@ if($_SESSION['login_user']){
          Overall site clean up.
       </li>
       <li>
-         Project About Page.
+         Coded in the details for the "About Page"
       </li>
    </ul>
 </ul>
@@ -196,6 +196,12 @@ if($_SESSION['login_user']){
       <li>
          Administrator Login pages including PHP code to connect to database, login, and logout.
       </li>
+      <li>
+         Created the Google slide presentation for video use.
+      </li>
+      <li>
+         Created client VMs for the Syslog server.
+      </li>
    </ul>
 </ul>
 <ul>
@@ -203,6 +209,9 @@ if($_SESSION['login_user']){
    <ul>
       <li>
          Create the syslog server in google cloud vm centos 7, rsyslog was installed and updated on the vm and configured the rsyslog.conf file to be able to receive logs through a tcp 514 port and UDP port 514.
+      </li>
+      <li>
+         Coded in the details for the "About Page"
       </li>
       <li>
          Started the rsyslog service on the vm.
@@ -231,7 +240,7 @@ if($_SESSION['login_user']){
     <li><img src="../documentation/img/vm2.png" width="100%" alt="oppsie woopsie uwu looks like this image is broken"></li>
     <ul>
             <li>
-            The picture above shows the client devise we have on the syslog server host machine.
+            The picture above shows the client device we have on the syslog server host machine.
             </li>
         </ul>
     <li><img src="../documentation/img/vm3.png" width="100%" alt="oppsie woopsie uwu looks like this image is broken"></li>
@@ -249,7 +258,7 @@ if($_SESSION['login_user']){
     <li><img src="../documentation/img/vm5.png" width="100%" alt="oppsie woopsie uwu looks like this image is broken"></li>
     <ul>
             <li>
-            The picture above shows the file location as to where the backup is being saved at
+            The picture above shows the file location as to where the backup are being saved at
             </li>
         </ul>
     <li><img src="../documentation/img/webpage1.png" width="100%" alt="oppsie woopsie uwu looks like this image is broken"></li>
@@ -261,7 +270,7 @@ if($_SESSION['login_user']){
     <li><img src="../documentation/img/webpage2.png" width="100%" alt="oppsie woopsie uwu looks like this image is broken"></li>
     <ul>
             <li>
-            The picture above shows the shows the log files of a client device
+            The picture above shows the log files of a client device
             </li>
         </ul>
 </ol>
