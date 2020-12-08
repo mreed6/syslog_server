@@ -231,7 +231,7 @@ if($_SESSION['login_user']){
     <li><img src="../documentation/img/vm2.png" alt="oppsie woopsie uwu looks like this image is broken"></li>
     <ul>
             <li>
-            This picture shows the client devise we have on the syslog server host machine.
+            The picture above shows the client devise we have on the syslog server host machine.
             </li>
         </ul>
     <li><img src="../documentation/img/vm3.png" alt="oppsie woopsie uwu looks like this image is broken"></li>
