@@ -121,18 +121,18 @@ if($_SESSION['login_user']){
                                     <div class="tab-pane active" id="profile">
                                        <p>
                                        <p>
-   Project summary, describing the project as a whole
+<h4> Project summary</h4>
 <ul>
    <li>Our class project is that we are making a syslog server that will gather logs from client computers, or hardware, and store them on the server for an Admin to view and look at. It keeps it organized and easy to access and read for all Administrators trying to monitor these devices
    </li>
 </ul>
-Background
+<h4>Background</h4>
 <ul>
    <li>
       How to use the service: the user would request from the Admin of the Syslog server that they would like to have their system logs organized and backed up on a daily basis. They would then be added to the Syslog server database, and organized through the Syslog host machine. Their logs would then be associated with their username via the online Admin Dashboard where the Admin can see all the clients organized and backed up system logs that have their device name on it.
    </li>
 </ul>
-Project overview describing
+<h4>Project overview describing:</h4>
 <ul>
    <li>What is the service?</li>
    <ul>
@@ -154,15 +154,16 @@ Project overview describing
             <li>Restart the service for rsyslog with “sudo systemctl restart rsyslog”</li>
          </ul>
       </ul>
-   </ul>
-   <li>After the server in set up, you need to enable the same syslog service on the device and edit the rsyslog.conf file to allow file transfer being sent to @@’ipaddress’:’portnumber’ ours would be @@35.223.28.98:514 at the end of the rsyslog.conf file</li>
+      <li>After the server in set up, you need to enable the same syslog service on the device and edit the rsyslog.conf file to allow file transfer being sent to @@’ipaddress’:’portnumber’ ours would be @@35.223.28.98:514 at the end of the rsyslog.conf file</li>
    <ul>
       <li>
          Restart the service the same way you restarted the service on the server.
       </li>
    </ul>
+   </ul>
+
 </ul>
-Group member contribution
+<h4>Group member contribution</h4>
 <ul>
    <li>Camron Grant:</li>
    <ul>
@@ -219,14 +220,15 @@ Group member contribution
       </li>
    </ul>
 </ul>
-Screenshots of the Project in Action:
+<h4>Screenshots of the Project in Action:</h4>
 <ul>
     <li><img src="" alt="host client service"></li>
     <li><img src="" alt="list of clients on host"></li>
-    <li><img src="" alt="rsync editing to 524"></li>
+    <li><img src="" alt="rsync editing to 514"></li>
     <li><img src="" alt="web interface showing clients"></li>
     <li><img src="" alt="web interface showing client logs"></li>
 </ul>
+</p>
 </p>
                                        </p>
                                     </div>
